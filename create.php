@@ -76,7 +76,7 @@ if (isset($_POST['simpan'])) {
                     <form method="POST" action="">
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Kode Produk</label>
-                            <input type="text" name="kode" class="form-control" placeholder="Contoh: 1" required>
+                            <input type="text" name="kode" class="form-control" placeholder="Contoh: PR001" required>
                         </div>
                         
                         <div class="mb-3">
