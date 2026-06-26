@@ -29,7 +29,7 @@ include 'connection.php';
                     <a class="nav-link active" aria-current="page" href="index.php">Daftar Produk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="tambah.php">Tambah Produk</a>
+                    <a class="nav-link" href="create.php">Tambah Produk</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Laporan Stok</a>
