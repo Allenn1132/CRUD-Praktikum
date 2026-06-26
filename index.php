@@ -15,7 +15,6 @@ include 'connection.php';
 
 <body class="bg-light">
 
-<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand fw-bold" href="index.php">Sistem Inventaris Toko</a>
@@ -46,24 +45,6 @@ include 'connection.php';
         <h3>Manajemen Data Produk</h3>
         </div>
 
-=======
-<nav class="navbar navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Sistem Inventaris Toko</a>
-    </div>
-</nav>
-
-<div class="container mt-4">
-
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h3>Manajemen Data Produk</h3>
-
-        <a href="tambah.php" class="btn btn-primary">
-            + Tambah Produk
-        </a>
-    </div>
-
->>>>>>> 58c27ec2690a0f3fc246b5759145be352f5ca132
     <div class="card shadow-sm">
         <div class="card-body">
 
@@ -85,16 +66,11 @@ include 'connection.php';
                 $query = mysqli_query($conn, "SELECT * FROM produk ORDER BY id_produk DESC");
 
                 if(mysqli_num_rows($query) > 0){
-<<<<<<< HEAD
-=======
-
->>>>>>> 58c27ec2690a0f3fc246b5759145be352f5ca132
                     while($data = mysqli_fetch_assoc($query)){
                 ?>
 
                     <tr>
                         <td><?= htmlspecialchars($data['kode']); ?></td>
-<<<<<<< HEAD
                         <td><?= htmlspecialchars($data['nama']); ?></td>
                         <td><?= htmlspecialchars($data['kategori']); ?></td>
                         <td>
@@ -104,23 +80,6 @@ include 'connection.php';
                             <?= $data['stok']; ?>
                         </td>
                         <td class="text-center">
-=======
-
-                        <td><?= htmlspecialchars($data['nama']); ?></td>
-
-                        <td><?= htmlspecialchars($data['kategori']); ?></td>
-
-                        <td>
-                            Rp <?= number_format($data['harga'],0,',','.'); ?>
-                        </td>
-
-                        <td class="text-center">
-                            <?= $data['stok']; ?>
-                        </td>
-
-                        <td class="text-center">
-
->>>>>>> 58c27ec2690a0f3fc246b5759145be352f5ca132
                             <a href="edit.php?id=<?= $data['id_produk']; ?>"
                                class="btn btn-warning btn-sm">
                                 Edit
@@ -128,17 +87,12 @@ include 'connection.php';
 
                             <form action="hapus.php" method="POST" class="d-inline">
                                 <input type="hidden" name="id" value="<?= $data['id_produk']; ?>">
-<<<<<<< HEAD
-=======
-
->>>>>>> 58c27ec2690a0f3fc246b5759145be352f5ca132
                                 <button type="submit"
                                         class="btn btn-danger btn-sm"
                                         onclick="return confirm('Yakin ingin menghapus produk ini?')">
                                     Hapus
                                 </button>
                             </form>
-
                         </td>
                     </tr>
 
@@ -146,23 +100,14 @@ include 'connection.php';
                     }
                 }else{
                 ?>
-<<<<<<< HEAD
-=======
-
->>>>>>> 58c27ec2690a0f3fc246b5759145be352f5ca132
                     <tr>
                         <td colspan="6" class="text-center">
                             Belum ada data produk.
                         </td>
                     </tr>
-<<<<<<< HEAD
-=======
-
->>>>>>> 58c27ec2690a0f3fc246b5759145be352f5ca132
                 <?php } ?>
 
                 </tbody>
-
             </table>
 
         </div>
@@ -170,9 +115,6 @@ include 'connection.php';
 
 </div>
 
-<<<<<<< HEAD
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-=======
->>>>>>> 58c27ec2690a0f3fc246b5759145be352f5ca132
 </body>
 </html>
