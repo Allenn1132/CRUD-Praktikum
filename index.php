@@ -85,7 +85,7 @@ include 'connection.php';
                                 Edit
                             </a>
 
-                            <form action="hapus.php" method="POST" class="d-inline">
+                            <form action="delete.php" method="POST" class="d-inline">
                                 <input type="hidden" name="id" value="<?= $data['id_produk']; ?>">
                                 <button type="submit"
                                         class="btn btn-danger btn-sm"

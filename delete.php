@@ -39,8 +39,35 @@
     </div>
 
     <?php
-    //code php taro disini
-    ?>
+include 'connection.php';
+
+if(isset($_POST['id'])){
+
+    $id = $_POST['id'];
+
+    $sql = "DELETE FROM produk WHERE id_produk='$id'";
+
+    if($conn->query($sql) === TRUE){
+
+        echo "<script>
+            alert('Produk berhasil dihapus');
+            window.location='index.php';
+        </script>";
+
+    }else{
+
+        echo "Error : " . $conn->error;
+
+    }
+
+}else{
+
+    echo "ID tidak terkirim";
+
+}
+
+$conn->close();
+?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
