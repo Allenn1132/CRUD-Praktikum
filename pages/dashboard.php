@@ -2,7 +2,6 @@
 session_start();
 include '../connection.php';
 
-// Query untuk statistik dashboard
 $total_produk = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total FROM produk"))['total'] ?? 0;
 $total_kategori = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(DISTINCT kategori) as total FROM produk"))['total'] ?? 0;
 $total_stok = mysqli_fetch_assoc(mysqli_query($conn, "SELECT SUM(stok) as total FROM produk"))['total'] ?? 0;

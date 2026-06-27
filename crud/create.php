@@ -2,7 +2,6 @@
 session_start();
 include '../connection.php';
 
-// Cek apakah tombol simpan ditekan
 if (isset($_POST['simpan'])) {
     $kode = $_POST['kode'];
     $nama = $_POST['nama'];
@@ -10,14 +9,11 @@ if (isset($_POST['simpan'])) {
     $harga = $_POST['harga'];
     $stok = $_POST['stok'];
 
-    // Menggunakan Prepared Statement untuk mencegah SQL Injection
     $stmt = $conn->prepare("INSERT INTO produk (kode, nama, kategori, harga, stok) VALUES (?, ?, ?, ?, ?)");
-    
-    // "sssii" berarti: string, string, string, integer, integer
     $stmt->bind_param("sssii", $kode, $nama, $kategori, $harga, $stok);
     
     if ($stmt->execute()) {
-        header("Location: ../kelola.php");
+        header("Location: ../pages/kelola.php");
         exit;
     } else {
         $error = "Gagal menyimpan data ke database!";
@@ -39,7 +35,7 @@ if (isset($_POST['simpan'])) {
 
 <nav class="navbar navbar-expand-lg navbar-custom py-3">
     <div class="container">
-        <a class="navbar-brand" href="../dashboard.php">Inventaris Toko</a>
+        <a class="navbar-brand" href="../pages/dashboard.php">Inventaris Toko</a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -48,13 +44,13 @@ if (isset($_POST['simpan'])) {
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="../dashboard.php">Dashboard</a>
+                    <a class="nav-link" href="../pages/dashboard.php">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.php">Daftar Produk</a>
+                    <a class="nav-link" href="../pages/index.php">Daftar Produk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../kelola.php">Kelola Produk</a>
+                    <a class="nav-link active" aria-current="page" href="../pages/kelola.php">Kelola Produk</a>
                 </li>
             </ul>
         </div>
@@ -102,7 +98,7 @@ if (isset($_POST['simpan'])) {
                     <hr class="my-4" style="border-color: rgba(0,0,0,0.08);">
                     
                     <div class="d-flex justify-content-end gap-2">
-                        <a href="../kelola.php" class="btn-ios-secondary text-decoration-none py-2 px-4">Batal</a>
+                        <a href="../pages/kelola.php" class="btn-ios-secondary text-decoration-none py-2 px-4">Batal</a>
                         <button type="submit" name="simpan" class="btn-ios-primary py-2 px-4">Simpan Data</button>
                     </div>
                 </form>

@@ -50,7 +50,7 @@ body {
     color: #0071e3 !important; /* iOS Blue */
 }
 
-/* Kartu Minimalis dengan Animasi */
+/* Kartu Minimalis */
 .card-custom {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
@@ -272,21 +272,3 @@ body {
 .stat-card:nth-child(2)::before { background: #34c759; } /* iOS Green */
 .stat-card:nth-child(3)::before { background: #ff9500; } /* iOS Orange */
 .stat-card:nth-child(4)::before { background: #af52de; } /* iOS Purple */
-
-.stat-card-title {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #86868b;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
-}
-
-.stat-card-value {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #1d1d1f;
-    letter-spacing: -0.02em;
-}
-
-
