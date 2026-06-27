@@ -1,0 +1,292 @@
+/* CSS Global - Gaya iOS Minimalis */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    background: radial-gradient(circle at top right, rgba(0, 113, 227, 0.05), transparent 600px),
+                radial-gradient(circle at bottom left, rgba(255, 149, 0, 0.03), transparent 600px),
+                #f5f5f7;
+    background-attachment: fixed;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1d1d1f;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.011em;
+}
+
+/* Navbar Minimalis */
+.navbar-custom {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.navbar-custom .navbar-brand {
+    color: #1d1d1f !important;
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: -0.022em;
+}
+
+.navbar-custom .nav-link {
+    color: #86868b !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: #0071e3 !important; /* iOS Blue */
+}
+
+/* Kartu Minimalis dengan Animasi */
+.card-custom {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.015);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.card-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.03);
+}
+
+.card-title-custom {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.021em;
+    margin-bottom: 1rem;
+    color: #1d1d1f;
+}
+
+/* Tabel Minimalis */
+.table-custom {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.table-custom th {
+    font-weight: 600;
+    color: #86868b;
+    border-bottom: 1px solid #e8e8ed;
+    padding: 12px 16px;
+    background-color: #fafafa;
+}
+
+.table-custom td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e8e8ed;
+    color: #1d1d1f;
+    vertical-align: middle;
+}
+
+.table-custom tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-custom tbody tr:hover td {
+    background-color: #fbfbfd;
+}
+
+/* Form Input iOS Style */
+.form-control-custom {
+    background-color: #f5f5f7;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+    color: #1d1d1f;
+    transition: all 0.2s ease;
+}
+
+.form-control-custom:focus {
+    background-color: #ffffff;
+    border-color: #0071e3;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15);
+}
+
+.form-label-custom {
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #86868b;
+    margin-bottom: 0.4rem;
+}
+
+/* Tombol iOS Style */
+.btn-ios-primary {
+    background-color: #0071e3;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-ios-primary:hover {
+    background-color: #0077ed;
+    color: #ffffff;
+}
+
+.btn-ios-primary:active {
+    transform: scale(0.98);
+}
+
+.btn-ios-secondary {
+    background-color: #e8e8ed;
+    color: #1d1d1f;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-ios-secondary:hover {
+    background-color: #d2d2d7;
+    color: #1d1d1f;
+}
+
+.btn-ios-warning {
+    background-color: #ff9500; /* iOS Orange */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-ios-warning:hover {
+    background-color: #ff9f0a;
+    color: #ffffff;
+}
+
+.btn-ios-danger {
+    background-color: #ff3b30; /* iOS Red */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-ios-danger:hover {
+    background-color: #ff453a;
+    color: #ffffff;
+}
+
+/* Badge Minimalis */
+.badge-custom {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.badge-bg-neutral {
+    background-color: #e8e8ed;
+    color: #515154;
+}
+
+/* Stat Cards Dashboard */
+.stat-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.015);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.03);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #0071e3;
+    transform: scaleY(0);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-card:hover::before {
+    transform: scaleY(1);
+}
+
+/* Stagger animation delay */
+.stat-card:nth-child(1) { animation-delay: 0.04s; }
+.stat-card:nth-child(2) { animation-delay: 0.08s; }
+.stat-card:nth-child(3) { animation-delay: 0.12s; }
+.stat-card:nth-child(4) { animation-delay: 0.16s; }
+
+/* Different active colored indicator on hover */
+.stat-card:nth-child(2)::before { background: #34c759; } /* iOS Green */
+.stat-card:nth-child(3)::before { background: #ff9500; } /* iOS Orange */
+.stat-card:nth-child(4)::before { background: #af52de; } /* iOS Purple */
+
+.stat-card-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #86868b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1d1d1f;
+    letter-spacing: -0.02em;
+}
+
+
