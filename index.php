@@ -80,7 +80,7 @@ include 'connection.php';
                             <?= $data['stok']; ?>
                         </td>
                         <td class="text-center">
-                            <a href="edit.php?id=<?= $data['id_produk']; ?>"
+                            <a href="update.php?id=<?= $data['id_produk']; ?>"
                                class="btn btn-warning btn-sm">
                                 Edit
                             </a>
